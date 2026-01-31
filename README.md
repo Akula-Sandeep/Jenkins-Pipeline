@@ -1,76 +1,90 @@
-CI/CD Pipeline with Jenkins, SonarQube, Docker, Helm, Argo CD & Kubernetes
-📌 Project Overview
+End-to-End CI/CD Pipeline for Java Application
 
-This project demonstrates an end-to-end DevOps CI/CD workflow for deploying a Java Spring Boot application into a Kubernetes environment.
+This project demonstrates an end-to-end CI/CD pipeline implementation for a Java Spring Boot application, automating build, analysis, containerization, and deployment workflows.
 
-The goal of this project was to gain hands-on experience integrating multiple DevOps tools and understanding how modern cloud-native application delivery works in real-world environments.
+🚀 Overview
 
-🛠 Tools & Technologies Used
+The pipeline automates the complete application lifecycle:
 
-Jenkins – CI/CD pipeline automation
+Source code integration
 
-Maven – Application build & dependency management
+Automated build and testing
 
-SonarQube – Static code quality analysis
+Static code quality analysis
 
-Docker – Application containerization
+Docker image creation and registry push
 
-Helm – Kubernetes package management
+Kubernetes deployment configuration update
 
-Argo CD – GitOps-based continuous deployment
+This setup simulates a real-world DevOps workflow used in production environments.
 
-Kubernetes – Container orchestration platform
+🔁 CI/CD Workflow
+🔹 Continuous Integration
 
-Git & GitHub – Source code and deployment manifest version control
+The pipeline uses Jenkins to:
 
-⚙️ CI/CD Workflow
+Fetch application source code
 
-Code Commit → Application source code pushed to GitHub
+Build the project using Maven
 
-Jenkins Pipeline Triggered
+Package the application into a JAR
 
-Builds the application using Maven
+Run static code analysis using SonarQube
 
-Runs SonarQube code quality scan
+This ensures code quality and build reliability.
 
-Docker Image Build
+🔹 Containerization
 
-Application packaged into a Docker container
+The application is containerized using Docker
 
-Image Push
+Images are tagged with build numbers for version tracking
 
-Docker image pushed to container registry
+Images are pushed to a container registry
 
-Helm Deployment Files Updated
+This enables consistent deployment across environments.
 
-Kubernetes manifests managed using Helm charts
+🔹 Continuous Deployment Preparation
 
-Argo CD Sync
+Deployment manifest files are automatically updated with new image tags
 
-Argo CD detects changes in Git
+Version-controlled infrastructure configuration ensures traceability
 
-Automatically deploys the application to Kubernetes
+🛠 Technologies Used
 
-☸️ Kubernetes Deployment Features
+Jenkins (Pipeline automation)
 
-Deployment and Service configurations using YAML
+Maven (Build tool)
 
-Replica scaling for high availability
+SonarQube (Code quality analysis)
 
-Rolling updates for zero downtime
+Docker (Containerization)
 
-Health checks using liveness and readiness probes
+Kubernetes YAML manifests
+
+Git (Version control)
+
+⚙️ Key DevOps Practices Demonstrated
+
+Automated build pipelines
+
+Infrastructure as Code (Kubernetes manifests)
+
+Versioned container images
+
+Code quality gates
+
+Credential management in CI/CD
+
+Docker-in-Docker build strategy
 
 🎯 Learning Outcomes
 
-Through this project, I learned:
+Designing CI/CD pipelines
 
-How CI and CD stages work together in a pipeline
+Integrating code quality tools
 
-Integrating code quality checks into automated workflows
+Automating Docker build and push
 
-Containerizing applications for consistent environments
+Managing deployment configurations
 
-Managing Kubernetes deployments using Helm
-
-Implementing GitOps principles using Argo CD
+Understanding end-to-end DevOps workflows
